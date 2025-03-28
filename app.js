@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const port = 3001;
 
+app.use(cors({ origin: 'http://localhost:3001' }));
+
 //middleware (altrimenti Express non riuscirà a leggere il body in formato JSON)
 app.use(express.json());
 
