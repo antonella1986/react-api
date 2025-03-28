@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import './App.css'
+const api_url = 'http://localhost:3001/'
 
 function App() {
   //parentesi quadre perché React restituisce un array con due elementi, quando useState viene chiamato. questo array viene destrutturato utilizzando la sintassi delle parentesi quadre
@@ -7,17 +7,19 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect (() => {
-    fetch("")
+    fetchData(api_url)
+  })
+  
+  function fetchData(url) {
+    fetch(url)
       .then(res => res.json())
-      .then((data) => {
-        setPosts(data);
-        setLoading(false);
+      .then(data => {
+        console.log(data);
       })
       .catch((error) => {
         setError(error.message);
       });
-  })
-
+  }
   return (
     <>
       <h1>Posts</h1>
