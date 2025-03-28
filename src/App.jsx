@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
+  //parentesi quadre perché React restituisce un array con due elementi, quando useState viene chiamato. questo array viene destrutturato utilizzando la sintassi delle parentesi quadre
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
 
