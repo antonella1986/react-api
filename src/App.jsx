@@ -30,7 +30,7 @@ function App() {
                 {posts.map(post => (
                   <div className="col" key={`post-${post.id}`}>
                     <div className="card">
-                      <img className='card-img-top' src={base_api_url + post.img} alt="" style={{ height: '240px', objectFit: 'cover' }} />
+                      <img className='card-img-top' src={base_api_url + post.image} alt="" style={{ height: '240px', objectFit: 'cover' }} />
                       <div className="card-body">
                         {post.title}
                       </div>
