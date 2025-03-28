@@ -8,7 +8,7 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect (() => {
-    fetchData(base_api_url - post_endpoint)
+    fetchData(base_api_url + post_endpoint)
   }, []);
   
   function fetchData(url) {
